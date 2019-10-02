@@ -85,7 +85,7 @@ def get_search_term() -> str:
 def print_card_info_divider() -> None:
     print("---")
     
-def get_cards_info(search_term) -> Iterable[Dict]:
+def get_cards_info(search_term: str) -> Iterable[Dict]:
     assert search_term, "search_term must not be empty"
     assert search_term != '""', "search_term must not be empty"
     card_search_dict = call("/cards/search", {"q": search_term + " f:standard"})
